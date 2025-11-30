@@ -1,6 +1,7 @@
 # Fruit Classification API with Decision Tree & Random Forest
 
-This project demonstrates how to **train and use machine learning models** (Decision Tree and Random Forest) to classify fruits based on numeric and categorical features.
+This project demonstrates how to **train and deploy machine learning models** (Decision Tree and Random Forest) to classify fruits based on numeric and categorical features.
+It also includes a FastAPI service to serve predictions via REST API.
 
 ## 🔧 Features
 - ✅ Download dataset directly from Kaggle via kagglehub
@@ -34,11 +35,11 @@ This project demonstrates how to **train and use machine learning models** (Deci
 - Open your browser at: 
     [Swagger UI](http://localhost:8000/docs)
 - Available endpoints:
-| Method | Endpoint      | Description                 |
-| ------ | ------------- | --------------------------- |
-| `GET`  | `/health`     | Health check                |
-| `POST` | `/predict/dt` | Predict using Decision Tree |
-| `POST` | `/predict/rf` | Predict using Random Forest |
+| Method | Endpoint       | Description                 |
+| ------ | :------------- | ---------------------------:|
+| `GET`  | `/health`      | Health check                |
+| `POST` | `/predict/dt`  | Predict using Decision Tree |
+| `POST` | `/predict/rf`  | Predict using Random Forest |
 
 - Example JSON Request:
 ```json
