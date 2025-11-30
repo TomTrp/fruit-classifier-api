@@ -38,9 +38,9 @@ It also includes a FastAPI service to serve predictions via REST API.
 
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | /health | Health check |
-| POST | /predict/dt | Predict using Decision Tree |
-| POST | /predict/rf | Predict using Random Forest |
+| `GET` | `/health` | Health check |
+| `POST` | `/predict/dt` | Predict using Decision Tree |
+| `POST` | `/predict/rf` | Predict using Random Forest |
 
 - Example JSON Request:
 ```json
