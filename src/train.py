@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import os
 
 # Download csv from kaggle
+# If this csv no longer available use it from datasets/
 def getFruitsDataSet():
     file_path = "pranavkapratwar/fruit-classification"
     path = kagglehub.dataset_download(file_path)
