@@ -1,6 +1,6 @@
 import kagglehub
 import pandas as pd
-import pickle
+from joblib import dump
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
@@ -20,7 +20,7 @@ def getFruitsDataSet():
     return csv_path
 
 # Pipeline
-def createPipeline(preprocessor, x_train, y_train, train_method = ""):
+def createPipeline(preprocessor, train_method = ""):
     if train_method == "decision_tree":
         classifier = DecisionTreeClassifier(random_state=42)
     elif train_method == "random_forest":
@@ -57,8 +57,8 @@ preprocessor = ColumnTransformer(
 # Split Train/Test
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
-dt_pipeline = createPipeline(preprocessor, x_train, y_train, "decision_tree")
-rf_pipeline = createPipeline(preprocessor, x_train, y_train, "random_forest")
+dt_pipeline = createPipeline(preprocessor, "decision_tree")
+rf_pipeline = createPipeline(preprocessor, "random_forest")
 
 # Train
 dt_pipeline.fit(x_train, y_train)
@@ -74,3 +74,6 @@ print(classification_report(y_test, y_pred_dt))
 
 print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
 print(classification_report(y_test, y_pred_rf))
+
+dump(dt_pipeline, "fruit_dt_model.joblib")
+dump(rf_pipeline, "fruit_rf_model.joblib")
