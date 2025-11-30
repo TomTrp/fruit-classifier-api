@@ -16,7 +16,7 @@ This project demonstrates how to **train and use machine learning models** (Deci
 - Python 3.8 or higher
 - Required Python packages:
     `pip install pandas numpy scikit-learn joblib kagglehub`
-- Kaggle API token (to download dataset via kagglehub) or refer to this documentation:[KaggleHub](https://github.com/Kaggle/kagglehub)
+- Kaggle API token (to download dataset via kagglehub) or refer to this documentation: [KaggleHub](https://github.com/Kaggle/kagglehub)
   
 ### 2. Train the Models
 - Run `train.py` to download dataset, train models, and save them as .joblib:
