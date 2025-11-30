@@ -35,11 +35,11 @@ It also includes a FastAPI service to serve predictions via REST API.
 - Open your browser at: 
     [Swagger UI](http://localhost:8000/docs)
 - Available endpoints:
-| Method | Endpoint       | Description                 |
-| ------ | :------------- | ---------------------------:|
-| `GET`  | `/health`      | Health check                |
-| `POST` | `/predict/dt`  | Predict using Decision Tree |
-| `POST` | `/predict/rf`  | Predict using Random Forest |
+| Method | Endpoint        | Description                 |
+| ------ | :-------------: | ---------------------------:|
+| `GET`  | `/health`       | Health check                |
+| `POST` | `/predict/dt`   | Predict using Decision Tree |
+| `POST` | `/predict/rf`   | Predict using Random Forest |
 
 - Example JSON Request:
 ```json
