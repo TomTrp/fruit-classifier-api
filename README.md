@@ -35,6 +35,12 @@ It also includes a FastAPI service to serve predictions via REST API.
 - Open your browser at: 
     [Swagger UI](http://localhost:8000/docs)
 - Available endpoints:
+| Command | Description | Example |
+| :------ | :---------- | :------ |
+| `git status` | List new or modified files | `git status` |
+| `git diff` | Show file differences | `git diff index.js` |
+| `git commit` | Record changes to the repository | `git commit -m "Add feature X"` |
+
 | Method | Endpoint | Description |
 |---|---|---|
 | GET | /health | Health check |
